@@ -8,7 +8,7 @@ project(publisher_subscriber)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  gemoetry_msgs
+  geometry_msgs
   robotino_msgs
   roscpp
   rospy
