@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 
     ros::NodeHandle n;
 
-    ros::Publisher cmdvel_pub = n.advertise<geometry_msgs::Twist>("cmd_vel", );
+    ros::Publisher cmdvel_pub = n.advertise<geometry_msgs::Twist>("cmd_vel", 1);
 
     ros::Rate loop_rate(10);
 
@@ -20,8 +20,8 @@ int main(int argc, char **argv)
         // your code here
 
 
-        ROS_INFO("")
-        cmdvel_pub.publish(msg);
+        ROS_INFO_STREAM("Velocity command : " << cmdvel_msg)
+        cmdvel_pub.publish(cmdvel_msg);
 
         ros::spinOnce();
 

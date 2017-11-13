@@ -2,14 +2,14 @@
 #include "std_msgs/String.h"
 #include "robotino_msgs/DigitalReadings.h"
 
-void digitalCallback(const std_msgs::String::ConstPtr& msg)
+void digitalCallback(const robotino_msgs::DigitalReadings::ConstPtr& msg)
 {
 
 }
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "listener");
+    ros::init(argc, argv, "digital_subscriber");
 
     ros::NodeHandle n;
 
